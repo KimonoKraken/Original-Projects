@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+import os
 
 BACKGROUND_COLOR = "#B1DDC6"
 
@@ -176,11 +177,12 @@ window.config(bg=BACKGROUND_COLOR)
 window.config(padx=50, pady=50)
 
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
-background_img = PhotoImage(file="card_front.png")
-card_background = canvas.create_image(400, 263, image=background_img)
-logo_img = PhotoImage(file="omad.PNG")
+current_path = os.path.dirname(__file__)                #New variable to finding new path for resources, no difference where you move a programm.
+background_img = PhotoImage(file=os.path.join(current_path, "card_front.png"))         #Now path to file its - new path from os. + file_name.
+card_background = canvas.create_image(400, 263, image=background_img)             
+logo_img = PhotoImage(file=os.path.join(current_path,"omad.PNG"))                       #Now path to file its - new path from os. + file_name.
 logo = canvas.create_image(395, 95, image=logo_img)
-calc_img = PhotoImage(file="calc2.png")
+calc_img = PhotoImage(file=os.path.join(current_path,"calc2.png"))                      #Now path to file its - new path from os. + file_name.
 calc = canvas.create_image(555, 315, image=calc_img)
 canvas.grid(row=0, column=0, columnspan=1)
 
