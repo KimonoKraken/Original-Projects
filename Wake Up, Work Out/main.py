@@ -82,12 +82,12 @@ def generate_workout():
 
     core_choice = random.choice(core)
 
-    return f"Beginner Workout:\n\n{upper_body_beg_choice} \n{lower_body_beg_choice} \n{core_choice}\n\n\n" \
-           f"Intermediate Workout: \n\n{upper_body_int_choice} \n{lower_body_int_choice} \n{core_choice}\n\n\n" \
-           f"Advanced Workout: \n\n{upper_body_adv_choice} \n{lower_body_adv_choice} \n{core_choice}\n\n\n" \
-           f"How to Use: If you're unable to complete the sets and reps required, " \
-           f"feel free to split the reps up and complete more sets to finish all the reps. " \
-           f"Once you're able to easily complete all sets and reps as written, move on to the next difficulty level."
+    return f'''Beginner Workout:\n\n{upper_body_beg_choice} \n{lower_body_beg_choice} \n{core_choice}\n\n\n \
+    Intermediate Workout: \n\n{upper_body_int_choice} \n{lower_body_int_choice} \n{core_choice}\n\n\n \
+Advanced Workout: \n\n{upper_body_adv_choice} \n{lower_body_adv_choice} \n{core_choice}\n\n\n \
+ How to Use: If you're unable to complete the sets and reps required, 
+           feel free to split the reps up and complete more sets to finish all the reps. 
+           Once you're able to easily complete all sets and reps as written, move on to the next difficulty level.'''
 
 
 with smtplib.SMTP("smtp.gmail.com", 587) as connection:
@@ -99,3 +99,4 @@ with smtplib.SMTP("smtp.gmail.com", 587) as connection:
                         msg=f"Subject:Wake Up, Workout! {today} \n\n{generate_workout()}"
                         )
 
+print(generate_workout())
