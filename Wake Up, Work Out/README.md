@@ -4,7 +4,7 @@ The program then adds those subscribed emails to the list 'emails', generates a 
 
 This program is hosted to automatically run on PythonAnywhere, everyday at 4am (EST), so subscribers will automatically receive a brand new and unique workout emailed to them every morning.
 
-There are over 162,000 possible unique workouts that can be generated.
+There are over 225 unique beginner workouts, 270 unique intermediate workouts, and 1944 unique advanced workouts that can be generated.
 
 Landing Page:
 https://github.com/deikaplan/Wake-Up-Workout-Landing-Page
