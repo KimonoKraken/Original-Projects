@@ -99,7 +99,7 @@ lower_body_adv = (
 
 core = (
     "Plank: 2 sets of 2 minutes",
-    "Side Plank: 2 minutes (each side)"
+    "Side Plank: 2 minutes (each side)",
     "Bicycle Crunches: 2 sets of 30 (each side)",
     "V-Ups: 2 sets of 30 reps",
     "Crunches: 2 sets of 30 reps",
